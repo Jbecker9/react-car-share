@@ -9,7 +9,7 @@ function NewCarForm(){
             <input placeholder="miles..."></input>
             <input placeholder="type..."></input>
             <input placeholder="image..."></input>
-            <button className="newCarButton"> Add a Car </button>
+            <button className="newCarButton"> Send to myGarage </button>
         </form>
     )
 }
