@@ -1,3 +1,9 @@
+.carImg {
+  width: 100%;
+  border-radius: 12px;
+  height: 200px;
+}
+
 .title {
   margin: auto;
   width: 90%;
@@ -15,7 +21,7 @@ form {
   margin: 5px 5px
 }
 
-input[type=text], input[type=password] {
+input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -24,7 +30,17 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-button {
+.button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.newCarButton{
   background-color: #04AA6D;
   color: white;
   padding: 14px 20px;
@@ -55,7 +71,9 @@ img.avatar {
 }
 
 .container {
-  padding: 16px;
+  max-width: 300px;
+
+  margin: 0 auto;
 }
 
 span.psw {
@@ -70,7 +88,7 @@ body {
 }
 
 .header {
-  float: left;
+  float: center;
   padding: 30px;
   font-size: 40px;
   margin: 15px 50px;
@@ -98,11 +116,14 @@ body {
   padding: 20px;
 }
 
-/* Add a card effect for articles */
 .card {
   background-color: white;
-  padding: 20px;
-  margin-top: 20px;
+
+  border: 1px solid #bacdd8;
+
+  padding: 8px;
+
+  border-radius: 12px;
 }
 
 
@@ -137,4 +158,12 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+.milageTxt {
+  float: right
+}
+
+.typeTxt {
+  float: left
 }

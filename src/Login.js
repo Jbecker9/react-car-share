@@ -55,9 +55,10 @@ function Login({ users, guestRender, newUserState, renderLogIn }){
                         <input type="password" name="password" placeholder="Password" 
                         onChange={(e)=>setloginPassword(e.target.value)} required/>
                     </div>
-                        <button type="submit" value="Submit">Login</button>
+                        <button className="button"type="submit" value="Submit">Login</button>
                 </form>
-                        <button type="click"
+                        <button
+                        className="button"type="click"
                         value="click"
                         onClick={guestLogIn}>Login as Guest
                         </button>
@@ -76,7 +77,7 @@ function Login({ users, guestRender, newUserState, renderLogIn }){
                         onChange={(e)=>setNewImage(e.target.value)}
                         />
                     </div>
-                    <button type="click"
+                    <button className="button" type="click"
                     value="click">Create Account</button>
                     </div>
                 </form>
