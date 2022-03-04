@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 
-function Login({ users, guestRender, newUserState }){
+function Login({ users, guestRender, newUserState, renderLogIn }){
     const history = useHistory()
+    const [loginUserName, setLoginUserName] = useState("")
+    const [loginPassword, setloginPassword] = useState("")
     const [newUserName, setNewUserName] = useState("")
     const [newPassword, setNewPassword] = useState("")
     const [newImage, setNewImage] = useState("")
-
-    function handleUserName(event){
-        console.log(event.target.value)
-    }
-    function handlePassword(event){
-        console.log(event.target.value)
-    }
 
     function guestLogIn(){
        const guestArray = users.filter((user)=>user.userName==="Guest")
@@ -40,16 +35,25 @@ function Login({ users, guestRender, newUserState }){
             history.push('/userpage')})
     }
 
+    function userLogin(event){
+        event.preventDefault()
+        const loginArray = users.filter((user)=>user.userName === loginUserName)
+        if (loginArray[0].password === loginPassword){
+            renderLogIn(loginArray[0])
+            history.push('./userpage')
+        }
+    }
+
     return (
         <div>
-            <form>
+            <form onSubmit={userLogin}>
                 <div>
                     <input type="text" name="username" placeholder="Username"
-                    onChange={handleUserName} />
+                    onChange={(e)=>setLoginUserName(e.target.value)} />
                     </div>
                     <div>
                         <input type="password" name="password" placeholder="Password" 
-                        onChange={handlePassword} required/>
+                        onChange={(e)=>setloginPassword(e.target.value)} required/>
                     </div>
                         <button type="submit" value="Submit">Login</button>
                 </form>

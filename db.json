@@ -11,7 +11,8 @@
           "year": 1950,
           "type": "Pick-up",
           "miles": 100000,
-          "image": "https://performance.ford.com/content/fordracing/home/enthusiasts/newsroom/2021/07/1950-ford-f1-pickup/_jcr_content/fr-contentItem/image.img.jpg/1625687194471.jpg"
+          "image": "https://performance.ford.com/content/fordracing/home/enthusiasts/newsroom/2021/07/1950-ford-f1-pickup/_jcr_content/fr-contentItem/image.img.jpg/1625687194471.jpg",
+          "id": 1
         }
       ],
       "id": 1
@@ -22,13 +23,6 @@
       "userImage": "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg",
       "userCarList": [],
       "id": 2
-    },
-    {
-      "userName": "Jb92",
-      "password": "1234",
-      "userImage": "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg",
-      "userCarList": [],
-      "id": 3
     }
   ]
 }

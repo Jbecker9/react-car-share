@@ -1,14 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import './App.css';
-import Login from "./Login";
 
 
 const linkStyles = {
     display: "inline-block",
-    width: "80px",
+    width: "100px",
     padding: "10px",
-    margin: "5px 6px 6px",
+    margin: "5px 10px 10px",
     background: "#04AA6D",
     textDecoration: "underline",
     color: "white",
@@ -34,7 +33,7 @@ function NavBar({ isSignedIn, logOut }){
             exact
             style={linkStyles}
             >
-                User Home
+                User Page
             </NavLink>
             <NavLink
             to="/login"

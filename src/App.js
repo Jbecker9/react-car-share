@@ -34,6 +34,11 @@ function App() {
     setIsSignedIn(true)
   }
 
+  function renderLogIn(prop){
+    setSignedInUser(prop)
+    setIsSignedIn(true)
+  }
+
   return (
     <div>
       <NavBar isSignedIn={isSignedIn} logOut={()=>logOut()}/>
@@ -43,7 +48,7 @@ function App() {
           <UserPage isSignedIn={isSignedIn} signedInUser={signedInUser} />
         </Route>
         <Route exact path="/login">
-          <Login users={users} guestRender={(prop)=>guestRender(prop)} newUserState={(prop)=>newUserState(prop)}/>
+          <Login users={users} guestRender={(prop)=>guestRender(prop)} newUserState={(prop)=>newUserState(prop)} renderLogIn={(prop)=>renderLogIn(prop)}/>
         </Route>
         <Route exact path="/">
           <Home isSignedIn={isSignedIn}/>
