@@ -9,8 +9,8 @@ function UserPage({ isSignedIn, signedInUser }){
 
     return (
         <div className="header">
-            <h2>{signedInUser[0].userName}</h2>
-            <div clasName="userImage">
+            {signedInUser.userName}
+            <div className="userImage"> <img className="avatar" src={signedInUser.userImage} />
             </div>
         </div>
     )

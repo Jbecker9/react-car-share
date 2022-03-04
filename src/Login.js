@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 
-function Login({ users, guestRender }){
+function Login({ users, guestRender, newUserState }){
     const history = useHistory()
+    const [newUserName, setNewUserName] = useState("")
+    const [newPassword, setNewPassword] = useState("")
+    const [newImage, setNewImage] = useState("")
 
     function handleUserName(event){
         console.log(event.target.value)
@@ -16,6 +19,25 @@ function Login({ users, guestRender }){
        const guestArray = users.filter((user)=>user.userName==="Guest")
        guestRender(guestArray)
        history.push('/userpage')
+    }
+
+    function addNewUser(event){
+        event.preventDefault()
+        const newUserObj= {
+            userName: newUserName,
+            password: newPassword,
+            userImage: newImage,
+            userCarList: []
+        }
+        fetch("http://localhost:3000/users",{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newUserObj)
+        }).then((r)=>r.json())
+            .then((newUserInfo)=>{newUserState(newUserInfo)
+            history.push('/userpage')})
     }
 
     return (
@@ -35,16 +57,19 @@ function Login({ users, guestRender }){
                         value="click"
                         onClick={guestLogIn}>Login as Guest
                         </button>
-                <form>
+                <form onSubmit={addNewUser}>
                     <div>
                         <input type="text" name="username" placeholder="Username"
+                        onChange={(e)=>setNewUserName(e.target.value)}
                         />
                     </div>
                     <div>
                         <input type="password" name="password" placeholder="Password" 
-                        />
+                        onChange={(e)=>setNewPassword(e.target.value)}
+                        required/>
                     <div>
                         <input type="text" name="userImage" placeholder="Profile Picture"
+                        onChange={(e)=>setNewImage(e.target.value)}
                         />
                     </div>
                     <button type="click"

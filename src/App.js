@@ -27,6 +27,13 @@ function App() {
     setIsSignedIn(false)
   }
 
+  function newUserState(prop){
+    const newUserArray = [...users, prop]
+    setUserData(newUserArray)
+    setSignedInUser(prop)
+    setIsSignedIn(true)
+  }
+
   return (
     <div>
       <NavBar isSignedIn={isSignedIn} logOut={()=>logOut()}/>
@@ -36,7 +43,7 @@ function App() {
           <UserPage isSignedIn={isSignedIn} signedInUser={signedInUser} />
         </Route>
         <Route exact path="/login">
-          <Login users={users} guestRender={(prop)=>guestRender(prop)}/>
+          <Login users={users} guestRender={(prop)=>guestRender(prop)} newUserState={(prop)=>newUserState(prop)}/>
         </Route>
         <Route exact path="/">
           <Home isSignedIn={isSignedIn}/>
