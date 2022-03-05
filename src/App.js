@@ -20,7 +20,6 @@ function App() {
   function guestRender(prop){
     setSignedInUser(prop[0])
     setIsSignedIn(true)
-    console.log(prop)
   }
 
   function logOut(){

@@ -21,7 +21,7 @@ function UserPage({ isSignedIn, signedInUser }){
             </div>
             <button className="newCarButton"
             onClick={showCarForm}> {isClicked ? "Hide form" : "Add a vehicle"} </button>
-            {isClicked ? <NewCarForm /> : null}
+            {isClicked ? <NewCarForm signedInUser={signedInUser} /> : null}
             <UserPageCarList carList={signedInUser.userCarList}/>
         </div>
     )
