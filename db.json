@@ -21,6 +21,14 @@
           "type": "Coupe",
           "miles": 15000,
           "image": "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/media/672264/2018-dodge-challenger-srt-392-srt-hellcat-in-depth-model-review-car-and-driver-photo-690428-s-original.jpg?fill=2:1&resize=1200:*"
+        },
+        {
+          "make": "Toyota",
+          "model": "Camry",
+          "year": 2022,
+          "type": "Sedan",
+          "miles": 287,
+          "image": "https://www.motortrend.com/uploads/2021/12/2022-Toyota-Camry-SE-11.jpg"
         }
       ],
       "id": 1

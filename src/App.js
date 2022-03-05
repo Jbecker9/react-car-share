@@ -39,7 +39,7 @@ function App() {
     setIsSignedIn(true)
   }
 
-  function renderNewCarList(prop){
+  function newCar(prop){
     setSignedInUser(prop)
   }
 
@@ -49,7 +49,7 @@ function App() {
       <h1 className='title'>E-Garage</h1>
       <Switch>
         <Route exact path="/userpage">
-          <UserPage isSignedIn={isSignedIn} signedInUser={signedInUser} />
+          <UserPage newCar={(prop)=>newCar(prop)} isSignedIn={isSignedIn} signedInUser={signedInUser} />
         </Route>
         <Route exact path="/login">
           <Login users={users} guestRender={(prop)=>guestRender(prop)} newUserState={(prop)=>newUserState(prop)} renderLogIn={(prop)=>renderLogIn(prop)}/>

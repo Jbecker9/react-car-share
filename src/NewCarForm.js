@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewCarForm({ signedInUser, showCarForm }){
+function NewCarForm({ signedInUser, newCarParent }){
     const [make, setMake] = useState("")
     const [model, setModel] = useState("")
     const [year, setYear] = useState(0)
@@ -27,10 +27,8 @@ function NewCarForm({ signedInUser, showCarForm }){
             body: JSON.stringify({userCarList: newCarListArray})
         }).then((r)=>r.json())
             .then((newCarData)=>{
-            console.log(newCarData)
-            })
-        showCarForm()
-            
+            newCarParent(newCarData)
+            })  
     }
 
 
