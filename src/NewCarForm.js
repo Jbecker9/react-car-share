@@ -18,15 +18,15 @@ function NewCarForm({ signedInUser }){
             miles: miles,
             image: image
         }
-        // fetch("http://localhost:3000/users",{
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     },
-        //     body: JSON.stringify()
-        // })
-    console.log(newCarObj)
-    console.log(signedInUser.userCarList)
+        const newCarListArray = [...signedInUser.userCarList, newCarObj]
+        fetch(`http://localhost:3000/users/${signedInUser.id}`,{
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({userCarList: [newCarListArray]})
+        }).then((r)=>r.json())
+            .then((newCarData)=>console.log(newCarData))
     }
 
 
