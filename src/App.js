@@ -39,6 +39,10 @@ function App() {
     setIsSignedIn(true)
   }
 
+  function renderNewCarList(prop){
+    setSignedInUser(prop)
+  }
+
   return (
     <div>
       <NavBar isSignedIn={isSignedIn} logOut={()=>logOut()}/>

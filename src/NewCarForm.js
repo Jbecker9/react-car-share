@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewCarForm({ signedInUser }){
+function NewCarForm({ signedInUser, showCarForm }){
     const [make, setMake] = useState("")
     const [model, setModel] = useState("")
     const [year, setYear] = useState(0)
@@ -13,9 +13,9 @@ function NewCarForm({ signedInUser }){
         const newCarObj = {
             make: make,
             model: model,
-            year: year,
+            year: parseInt(year),
             type: type,
-            miles: miles,
+            miles: parseInt(miles),
             image: image
         }
         const newCarListArray = [...signedInUser.userCarList, newCarObj]
@@ -24,9 +24,13 @@ function NewCarForm({ signedInUser }){
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({userCarList: [newCarListArray]})
+            body: JSON.stringify({userCarList: newCarListArray})
         }).then((r)=>r.json())
-            .then((newCarData)=>console.log(newCarData))
+            .then((newCarData)=>{
+            console.log(newCarData)
+            })
+        showCarForm()
+            
     }
 
 

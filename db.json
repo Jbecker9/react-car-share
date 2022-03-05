@@ -5,25 +5,23 @@
       "password": "HelloGuest",
       "userImage": "https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png",
       "userCarList": [
-        [
-          {
-            "make": "Ford",
-            "model": "F100",
-            "year": 1950,
-            "type": "Pick-up",
-            "miles": 100000,
-            "image": "https://performance.ford.com/content/fordracing/home/enthusiasts/newsroom/2021/07/1950-ford-f1-pickup/_jcr_content/fr-contentItem/image.img.jpg/1625687194471.jpg",
-            "id": 1
-          },
-          {
-            "make": "Dodge",
-            "model": "Challenger",
-            "year": "2018",
-            "type": "",
-            "miles": "15000",
-            "image": "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/media/672264/2018-dodge-challenger-srt-392-srt-hellcat-in-depth-model-review-car-and-driver-photo-690428-s-original.jpg?fill=2:1&resize=1200:*"
-          }
-        ]
+        {
+          "make": "Ford",
+          "model": "F100",
+          "year": 1950,
+          "type": "Pick-up",
+          "miles": 100000,
+          "image": "https://performance.ford.com/content/fordracing/home/enthusiasts/newsroom/2021/07/1950-ford-f1-pickup/_jcr_content/fr-contentItem/image.img.jpg/1625687194471.jpg",
+          "id": 1
+        },
+        {
+          "make": "Dodge",
+          "model": "Challenger",
+          "year": 2018,
+          "type": "Coupe",
+          "miles": 15000,
+          "image": "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/media/672264/2018-dodge-challenger-srt-392-srt-hellcat-in-depth-model-review-car-and-driver-photo-690428-s-original.jpg?fill=2:1&resize=1200:*"
+        }
       ],
       "id": 1
     },

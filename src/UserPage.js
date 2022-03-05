@@ -10,6 +10,8 @@ function UserPage({ isSignedIn, signedInUser }){
         setClicked(!isClicked)
     }
 
+    console.log(signedInUser.userCarList)
+
     if (!isSignedIn) return <Redirect to="/login" />;
 
     return (
@@ -21,8 +23,10 @@ function UserPage({ isSignedIn, signedInUser }){
             </div>
             <button className="newCarButton"
             onClick={showCarForm}> {isClicked ? "Hide form" : "Add a vehicle"} </button>
-            {isClicked ? <NewCarForm signedInUser={signedInUser} /> : null}
-            <UserPageCarList carList={signedInUser.userCarList}/>
+            {isClicked ? <NewCarForm showCarForm={()=>showCarForm()} signedInUser={signedInUser} /> : null}
+            <div className="container">
+            {signedInUser.userCarList.map((car)=> <UserPageCarList key={car.id} car={car}/>)}
+            </div>
         </div>
     )
 }
