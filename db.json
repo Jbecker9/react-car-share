@@ -37,7 +37,16 @@
       "userName": "Jb92",
       "password": "1234",
       "userImage": "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg",
-      "userCarList": [],
+      "userCarList": [
+        {
+          "make": "Toyota",
+          "model": "Camry",
+          "year": 2022,
+          "type": "Sedan",
+          "miles": 589,
+          "image": "https://www.motortrend.com/uploads/2021/12/2022-Toyota-Camry-SE-11.jpg"
+        }
+      ],
       "id": 2
     },
     {
