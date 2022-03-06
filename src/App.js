@@ -39,7 +39,6 @@ function App() {
     setSignedInUser(prop[0])
     setIsSignedIn(true)
   }
-  console.log(signedInUser)
 
   function logOut(){
     setSignedInUser([])

@@ -12,6 +12,14 @@
           "type": "Sedan",
           "miles": 589,
           "image": "https://www.motortrend.com/uploads/2021/12/2022-Toyota-Camry-SE-11.jpg"
+        },
+        {
+          "make": "Ford",
+          "model": "Explorer",
+          "year": 2022,
+          "type": "SUV",
+          "miles": 200,
+          "image": "https://media.ed.edmunds-media.com/ford/explorer/2021/oem/2021_ford_explorer_4dr-suv_king-ranch_fq_oem_1_1600.jpg"
         }
       ],
       "id": 2
