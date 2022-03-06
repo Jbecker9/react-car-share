@@ -56,6 +56,9 @@ function App() {
       }).then((r)=>r.json())
         .then((data)=>console.log(data))
     } else {
+      fetch("http://localhost:3000/users")
+      .then((r)=>r.json())
+      .then((userData) => setUserData(userData))
     }
   }
 
