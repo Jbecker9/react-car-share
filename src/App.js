@@ -10,6 +10,24 @@ function App() {
   const [users, setUserData] = useState([])
   const [signedInUser, setSignedInUser] = useState([])
   const [isSignedIn, setIsSignedIn] = useState(false)
+  const guestData = {
+    userName: "Guest",
+    password: "HelloGuest",
+    userImage: "https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png",
+    userCarList: [
+      {
+        make: "Ford",
+        model: "F100",
+        year: 1950,
+        type: "Pick-up",
+        miles: 100000,
+        image: "https://performance.ford.com/content/fordracing/home/enthusiasts/newsroom/2021/07/1950-ford-f1-pickup/_jcr_content/fr-contentItem/image.img.jpg/1625687194471.jpg",
+        id: 1
+      }
+    ],
+    "id": 1
+  }
+
 
   useEffect(()=>{
     fetch("http://localhost:3000/users")
@@ -21,10 +39,25 @@ function App() {
     setSignedInUser(prop[0])
     setIsSignedIn(true)
   }
+  console.log(signedInUser)
 
   function logOut(){
     setSignedInUser([])
     setIsSignedIn(false)
+    if (signedInUser.userName === "Guest"){
+      fetch("http://localhost:3000/users/1",{
+        method: "DELETE"
+      })
+      fetch("http://localhost:3000/users",{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(guestData)
+      }).then((r)=>r.json())
+        .then((data)=>console.log(data))
+    } else {
+    }
   }
 
   function newUserState(prop){

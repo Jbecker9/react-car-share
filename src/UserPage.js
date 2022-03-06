@@ -17,15 +17,13 @@ function UserPage({ isSignedIn, signedInUser, newCar }){
         setCarList(prop.userCarList)
     }
 
-    console.log(signedInUser.userCarList)
-
     if (!isSignedIn) return <Redirect to="/login" />;
 
     return (
         <div>
             <div className="header">
                 {signedInUser.userName}
-                <div className="userImage"> <img className="avatar" src={signedInUser.userImage} />
+                <div className="userImage"> <img className="avatar" src={signedInUser.userImage} alt="PFP" />
                 </div>
             </div>
             <button className="newCarButton"
