@@ -1,6 +1,22 @@
 {
   "users": [
     {
+      "userName": "Guest",
+      "password": "HelloGuest",
+      "userImage": "https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png",
+      "userCarList": [
+        {
+          "make": "Ford",
+          "model": "F100",
+          "year": 1950,
+          "type": "Pick-up",
+          "miles": 100000,
+          "image": "https://performance.ford.com/content/fordracing/home/enthusiasts/newsroom/2021/07/1950-ford-f1-pickup/_jcr_content/fr-contentItem/image.img.jpg/1625687194471.jpg"
+        }
+      ],
+      "id": 1
+    },
+    {
       "userName": "Jb92",
       "password": "1234",
       "userImage": "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg",

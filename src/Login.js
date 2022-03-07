@@ -10,9 +10,9 @@ function Login({ users, guestRender, newUserState, renderLogIn }){
     const [newPassword, setNewPassword] = useState("")
     const [newImage, setNewImage] = useState("")
 
+
     function guestLogIn(){
-       const guestArray = users.filter((user)=>user.userName==="Guest")
-       guestRender(guestArray)
+       guestRender(users[0])
        history.push('/userpage')
     }
 

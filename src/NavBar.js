@@ -13,6 +13,7 @@ const linkStyles = {
     color: "white",
   };
 
+  
 function NavBar({ isSignedIn, logOut }){
 
     function logOutClick(){
@@ -26,7 +27,7 @@ function NavBar({ isSignedIn, logOut }){
                 exact
                 style={linkStyles}
                 >
-                Home
+                Search
             </NavLink>
             <NavLink
             to="/userpage"
