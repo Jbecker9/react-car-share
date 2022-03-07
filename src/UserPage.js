@@ -8,7 +8,11 @@ function UserPage({ isSignedIn, signedInUser, newCar }){
     const [carList, setCarList] = useState(signedInUser.userCarList)
 
     function showCarForm(){
-        setClicked(!isClicked)
+        if (signedInUser.id !== 1) {
+            setClicked(!isClicked)
+        } else {
+            Error("Sign in to add to your Garage!")
+        }
     }
 
     function newCarParent(prop){
