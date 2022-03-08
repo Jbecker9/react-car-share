@@ -17,6 +17,10 @@ E-Garage is a React single page application where users can keep track of owned 
 
 If youre not sure about logging in, login as a guest! However, you will not be able to add vehicles; however, all other app functionalities are available.
 
+`sample log-in:`
+username: `JB92`
+password: `1234`
+
 ### Creating a profile
 
 When creating a profile, a password and username is necessary. No profile picture will be provided if the user does not provide one. 
