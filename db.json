@@ -60,6 +60,14 @@
           "type": "SUV",
           "miles": 2054,
           "image": "https://i.gaw.to/vehicles/photos/40/23/402337-2021-mercedes-benz-gle.jpg"
+        },
+        {
+          "make": "Honda",
+          "model": "Accord",
+          "year": 2010,
+          "type": "Sedan",
+          "miles": 101560,
+          "image": "https://file.kelleybluebookimages.com/kbb/base/house/2010/2010-Honda-Accord-FrontSide_HOACCCPE101_505x375.jpg"
         }
       ],
       "id": 2
@@ -70,6 +78,22 @@
       "userImage": "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg",
       "userCarList": [],
       "id": 3
+    },
+    {
+      "userName": "NewAccount",
+      "password": "1234",
+      "userImage": "https://i.pinimg.com/474x/9b/47/a0/9b47a023caf29f113237d61170f34ad9.jpg",
+      "userCarList": [
+        {
+          "make": "Honda",
+          "model": "Accord",
+          "year": 2010,
+          "type": "Sedan",
+          "miles": 150489,
+          "image": "https://file.kelleybluebookimages.com/kbb/base/house/2010/2010-Honda-Accord-FrontSide_HOACCCPE101_505x375.jpg"
+        }
+      ],
+      "id": 4
     }
   ]
 }

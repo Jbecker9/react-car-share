@@ -10,7 +10,6 @@ function App() {
   const [users, setUserData] = useState([])
   const [signedInUser, setSignedInUser] = useState([])
   const [isSignedIn, setIsSignedIn] = useState(false)
-  const [isGuest, setGuest] = useState(false)
 
 
   useEffect(()=>{
@@ -22,13 +21,11 @@ function App() {
   function guestRender(prop){
     setSignedInUser(prop)
     setIsSignedIn(true)
-    setGuest(true)
   }
 
   function logOut(){
     setSignedInUser([])
     setIsSignedIn(false)
-    setGuest(false)
     if (signedInUser.id !== 1) {
       fetch("http://localhost:3000/users")
       .then((r)=>r.json())
