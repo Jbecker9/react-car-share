@@ -11,7 +11,6 @@ function SearchForm({ users, renderSearchUsers, showSearch }){
         const searchFilter = users.filter((user)=>user.userName.toLowerCase().includes(search.toLowerCase()))
         setSearchData(searchFilter)
         renderSearchUsers()
-        console.log(showSearch)
     }
 
     return(

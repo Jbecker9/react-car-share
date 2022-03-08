@@ -12,7 +12,6 @@ function Search({ isSignedIn, users }){
             setShowSearch(false)
         } else {
         }
-        console.log(showSearch)
     }
 
     function renderSearchUsers(){
