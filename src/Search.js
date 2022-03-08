@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Redirect } from "react-router-dom"
+import SearchForm from "./SearchForm";
 
-function Search({ isSignedIn }){
+function Search({ isSignedIn, users }){
+    const [searchClick, setSearchClick] = useState(false)
+    const [showSearch, setShowSearch] = useState(false)
 
+    function getClick(){
+        setSearchClick(!searchClick);
+        if (searchClick === false){
+            setShowSearch(false)
+        } else {
+        }
+        console.log(showSearch)
+    }
+
+    function renderSearchUsers(){
+        setShowSearch(true)
+    }
     
     if (!isSignedIn) return <Redirect to="/login" /> ;
 
     return (
-        <div>Home Page</div>
+        <div>
+            <button className="searchUserButton" onClick={getClick} >{searchClick ? "Hide search" : "Search for a user..."}</button>
+            {searchClick ? <SearchForm users={users} renderSearchUsers={()=>renderSearchUsers()}
+            showSearch={showSearch}/> : null}
+        </div>
     )
 }
 

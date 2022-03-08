@@ -64,7 +64,7 @@ function App() {
           <Login users={users} guestRender={(prop)=>guestRender(prop)} newUserState={(prop)=>newUserState(prop)} renderLogIn={(prop)=>renderLogIn(prop)}/>
         </Route>
         <Route exact path="/">
-          <Search isSignedIn={isSignedIn}/>
+          <Search users={users} isSignedIn={isSignedIn}/>
         </Route>
       </Switch>
     </div>
