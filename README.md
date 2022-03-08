@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Car Share (made with ReactJS)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Start-up
 
-In the project directory, you can run:
+- Make sure to follow steps in order, `npm start` gives you the ability to fix the port conflict. 
+- open your terminal and change to the hooked file.
+- In your terminal, run `json-server --watch db.json` to get the user API.
+- In a seperate terminal, run `npm start`. If it asks to use a different port name, type `y` or `yes` and press `enter`.
 
-### `npm start`
+### Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Welcome to E-Garage!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+E-Garage is a React single page application where users can keep track of owned vehicles Online. 
 
-### `npm test`
+If youre not sure about logging in, login as a guest! However, you will not be able to add vehicles; however, all other app functionalities are available.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Creating a profile
 
-### `npm run build`
+When creating a profile, a password and username is necessary. No profile picture will be provided if the user does not provide one. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The profile picture must be an image URL.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### User Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+When you sign in, you will be redirected to your own userpage. Here you will see your username, profile picture, an "add a vehicle button," and a personal vehicle list (if you are a new user, or have no vehicles saved, no vehicles will be shown).
 
-### `npm run eject`
+To add a vehicle, click the "Add a vehicle" button. Type your vehicles make, model, year, milage, body type, and a personal image of your vehicle (stock images are welcome if you are not confortable showing your personal vehicle). When all desired information is placed, click the button "send to my garage." Once clicked, your vehicle information will be saved and you will see a card with your newly inputed vehicle info displayed. If you change your mind just click the same button where it says "hide form," and it will hide the new vehicle form. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+On the vehicle cards, you will see the year, make, and model of your vehicle as well as the vehicle type and milage displayed below. The provided image will be under the text on the bottom half of the display card.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Search Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To search for a user click the button labeled "Search for a user..." Once clicked, a searchbar will pop-up. Search the user you are looking for, click the grey "search" button. A list of usernames and the entire number of vehicles the specific user currently holds will be displayed. If you would like to see all users, search with an empty field. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Sign Out
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To signout, click the "Sign Out" button on the very top of the page. This will redirect you to the login page from the beginning of the session. When you come back, just repeat the steps!

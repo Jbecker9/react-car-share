@@ -66,7 +66,7 @@ function Login({ users, guestRender, newUserState, renderLogIn }){
                     <div>
                         <input type="text" name="username" placeholder="Username"
                         onChange={(e)=>setNewUserName(e.target.value)}
-                        />
+                        required/>
                     </div>
                     <div>
                         <input type="password" name="password" placeholder="Password" 
