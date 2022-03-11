@@ -16,10 +16,6 @@ const linkStyles = {
   
 function NavBar({ isSignedIn, logOut }){
 
-    function logOutClick(){
-        logOut()
-    }
-
     return (
         <div>
             <NavLink
@@ -40,7 +36,7 @@ function NavBar({ isSignedIn, logOut }){
             to="/login"
             exact
             style={linkStyles}
-            onClick={logOutClick}
+            onClick={logOut}
             >
                 {isSignedIn ? "Sign Out" : "Welcome!"}
             </NavLink>

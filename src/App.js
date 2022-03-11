@@ -18,8 +18,8 @@ function App() {
       .then((userData) => setUserData(userData))
   }, [])
 
-  function guestRender(prop){
-    setSignedInUser(prop)
+  function guestRender(guest){
+    setSignedInUser(guest)
     setIsSignedIn(true)
   }
 
@@ -33,32 +33,32 @@ function App() {
     } else {}
     }
 
-  function newUserState(prop){
-    const newUserArray = [...users, prop]
+  function newUserState(userGrab){
+    const newUserArray = [...users, userGrab]
     setUserData(newUserArray)
-    setSignedInUser(prop)
+    setSignedInUser(userGrab)
     setIsSignedIn(true)
   }
 
-  function renderLogIn(prop){
-    setSignedInUser(prop)
+  function renderLogIn(userGrab){
+    setSignedInUser(userGrab)
     setIsSignedIn(true)
   }
 
-  function newCar(prop){
-    setSignedInUser(prop)
+  function newCar(newUserData){
+    setSignedInUser(newUserData)
   }
 
   return (
     <div>
-      <NavBar isSignedIn={isSignedIn} logOut={()=>logOut()}/>
+      <NavBar isSignedIn={isSignedIn} logOut={logOut}/>
       <h1 className='title'>E-Garage</h1>
       <Switch>
         <Route exact path="/userpage">
-          <UserPage newCar={(prop)=>newCar(prop)} isSignedIn={isSignedIn} signedInUser={signedInUser} />
+          <UserPage newCar={newCar} isSignedIn={isSignedIn} signedInUser={signedInUser} />
         </Route>
         <Route exact path="/login">
-          <Login users={users} guestRender={(prop)=>guestRender(prop)} newUserState={(prop)=>newUserState(prop)} renderLogIn={(prop)=>renderLogIn(prop)}/>
+          <Login users={users} guestRender={guestRender} newUserState={newUserState} renderLogIn={renderLogIn}/>
         </Route>
         <Route exact path="/">
           <Search users={users} isSignedIn={isSignedIn}/>

@@ -5,9 +5,8 @@ function SearchForm({ users, renderSearchUsers, showSearch }){
     const [search, setSearch] = useState("")
     const [searchData, setSearchData] = useState([])
 
-    function renderUsers(e){
+    const renderUsers = (e) => {
         e.preventDefault()
-
         const searchFilter = users.filter((user)=>user.userName.toLowerCase().includes(search.toLowerCase()))
         setSearchData(searchFilter)
         renderSearchUsers()

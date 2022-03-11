@@ -6,7 +6,7 @@ function Search({ isSignedIn, users }){
     const [searchClick, setSearchClick] = useState(false)
     const [showSearch, setShowSearch] = useState(false)
 
-    function getClick(){
+    const getClick = () => {
         setSearchClick(!searchClick);
         if (searchClick === false){
             setShowSearch(false)
@@ -14,7 +14,7 @@ function Search({ isSignedIn, users }){
         }
     }
 
-    function renderSearchUsers(){
+    const renderSearchUsers = () => {
         setShowSearch(true)
     }
     
@@ -23,7 +23,7 @@ function Search({ isSignedIn, users }){
     return (
         <div>
             <button className="searchUserButton" onClick={getClick} >{searchClick ? "Hide search" : "Search for a user..."}</button>
-            {searchClick ? <SearchForm users={users} renderSearchUsers={()=>renderSearchUsers()}
+            {searchClick ? <SearchForm users={users} renderSearchUsers={renderSearchUsers}
             showSearch={showSearch}/> : null}
         </div>
     )

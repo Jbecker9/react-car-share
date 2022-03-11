@@ -7,7 +7,7 @@ function UserPage({ isSignedIn, signedInUser, newCar }){
     const [isClicked, setClicked] = useState(false)
     const [carList, setCarList] = useState(signedInUser.userCarList)
 
-    function showCarForm(){
+    const showCarForm = () => {
         if (signedInUser.id !== 1) {
             setClicked(!isClicked)
         } else {
@@ -15,10 +15,10 @@ function UserPage({ isSignedIn, signedInUser, newCar }){
         }
     }
 
-    function newCarParent(prop){
-        newCar(prop)
+    const newCarParent = (newUserData) => {
+        newCar(newUserData)
         setClicked(!isClicked)
-        setCarList(prop.userCarList)
+        setCarList(newUserData.userCarList)
     }
 
     if (!isSignedIn) return <Redirect to="/login" />;
@@ -32,7 +32,7 @@ function UserPage({ isSignedIn, signedInUser, newCar }){
             </div>
             <button className="newCarButton"
             onClick={showCarForm}> {isClicked ? "Hide form" : "Add a vehicle"} </button>
-            {isClicked ? <NewCarForm newCarParent={(prop)=>newCarParent(prop)} showCarForm={()=>showCarForm()} signedInUser={signedInUser} /> : null}
+            {isClicked ? <NewCarForm newCarParent={newCarParent} showCarForm={showCarForm} signedInUser={signedInUser} /> : null}
             <div className="container">
             {carList.map((car)=> <UserPageCarList key={car.miles} car={car}/>)}
             </div>
