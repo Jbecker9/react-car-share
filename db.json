@@ -76,6 +76,14 @@
           "type": "Sedan",
           "miles": 115000,
           "image": "https://file.kelleybluebookimages.com/kbb/base/house/2010/2010-Honda-Accord-FrontSide_HOACCCPE101_505x375.jpg"
+        },
+        {
+          "make": "ford",
+          "model": "mustang",
+          "year": 2016,
+          "type": "Coupe",
+          "miles": 1587,
+          "image": ""
         }
       ],
       "id": 2
@@ -102,6 +110,13 @@
         }
       ],
       "id": 4
+    },
+    {
+      "userName": "NewUser1",
+      "password": "1234",
+      "userImage": "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg",
+      "userCarList": [],
+      "id": 5
     }
   ]
 }

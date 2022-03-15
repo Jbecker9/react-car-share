@@ -6,6 +6,11 @@ import UserPageCarList from "./UserPageCarList";
 function UserPage({ isSignedIn, signedInUser, newCar }){
     const [isClicked, setClicked] = useState(false)
     const [carList, setCarList] = useState(signedInUser.userCarList)
+    const [increment, setIncrement] = useState(0)
+
+    const incrementInteger = (e) => {
+        setIncrement(e.target.value.length)
+    }
 
     const showCarForm = () => {
         if (signedInUser.id !== 1) {
@@ -34,7 +39,8 @@ function UserPage({ isSignedIn, signedInUser, newCar }){
             onClick={showCarForm}> {isClicked ? "Hide form" : "Add a vehicle"} </button>
             {isClicked ? <NewCarForm newCarParent={newCarParent} showCarForm={showCarForm} signedInUser={signedInUser} /> : null}
             <div className="container">
-            {carList.map((car)=> <UserPageCarList key={car.miles} car={car}/>)}
+            <input placeholder="increment likes" onChange={(e)=>incrementInteger(e)} />
+            {carList.map((car)=> <UserPageCarList increment={increment} key={car.miles} car={car}/>)}
             </div>
         </div>
     )
